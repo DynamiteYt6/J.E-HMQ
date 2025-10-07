@@ -1,2 +1,2 @@
-# J.E-Motors
-A simple showcase website for J.E motors and Autoparts
+# J.E Heavy Machineries and Quarry Limited
+A simple showcase website for J.E Heavy Machineries and Quarry Limited
