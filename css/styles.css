@@ -1,0 +1,305 @@
+:root {
+  --primary: #1d4ed8;
+  --muted: #6b7280;
+  --light: #ffffff;
+  --bg: #f8fafc;
+  --card-bg: #ffffff;
+}
+
+/* RESET */
+* { box-sizing: border-box; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  background: var(--bg);
+  color: #111827;
+}
+
+/* ------------------ NAVBAR ------------------ */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--light);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.logo a {
+  display: flex;
+  align-items: center;
+  color: var(--primary);
+  text-decoration: none;
+}
+.logo-icon {
+  font-size: 1.8rem;
+}
+.logo-text {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.nav-links a {
+  color: #111827;
+  font-weight: 600;
+  text-decoration: none;
+}
+.nav-links a:hover {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+}
+
+/* Buttons / Icons */
+.icon-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+/* Hamburger  */
+.hamburger {
+  display: none;
+}
+
+/* ------------------ HERO ------------------ */
+#welcome-section {
+  position: relative;
+  margin-top: 70px;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 80vh; 
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+}
+
+.hero-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.hero-content h1 {
+  font-size: clamp(1.6rem, 4vw, 2.8rem);
+  margin-bottom: 0.5rem;
+}
+.hero-content p {
+  max-width: 700px;
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  margin: 0 0.3rem;
+  font-weight: 600;
+}
+.btn.primary {
+  background: var(--primary);
+  color: white;
+  border: transparent;
+}
+.btn.outline {
+  border: 1px solid white;
+  color: white;
+}
+.btn.primary:hover {
+    color: var(--primary);
+    background:  transparent;
+    transition: 0.75s;
+    border: 1px solid var(--primary);
+}
+.btn.outline:hover {
+    background: white;
+    color: #93c5fd;
+    transition: 0.75s;
+}
+/* ------------------ SERVICES ------------------ */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.service-card {
+  background: var(--card-bg);
+  border-radius: 10px;
+  padding: 1.2rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+}
+.service-card i {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 0.6rem;
+}
+
+/* ------------------ FOOTER ------------------ */
+footer {
+  background: var(--light);
+  padding: 1rem;
+  text-align: center;
+  color: #555;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+/* ------------------ RESPONSIVE NAV ------------------ */
+@media (max-width: 880px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--light);
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    list-style-type: none;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+    color: #111827;
+  }
+}
+/* ------------------
+   DARK MODE
+   ------------------ */
+body.dark-mode {
+  background: #0b1220;
+  color: #e5e7eb;
+}
+
+body.dark-mode nav,
+body.dark-mode #navbar {
+  background: #111827;
+  box-shadow: none;
+}
+
+body.dark-mode .logo-text,
+body.dark-mode a {
+  color: #93c5fd;
+}
+
+body.dark-mode .service-card {
+  background: #1f2937;
+  color: #e5e7eb;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+body.dark-mode footer {
+  background: #111827;
+  color: #9ca3af;
+}
+
+
+body.dark-mode .btn.primary:hover {
+  background: transparent;
+}
+
+body.dark-mode .btn.outline {
+  border-color: #93c5fd;
+  color: #93c5fd;
+}
+body.dark-mode .btn.outline:hover {
+  border-color: #93c5fd;
+  color: white;
+  background: #93c5fd;
+}
+/* Dark mode navbar consistency */
+body.dark-mode #navbar,
+body.dark-mode nav {
+  background: #111827; /* same solid color everywhere */
+}
+
+/* Make nav-links transparent on larger screens */
+body.dark-mode .nav-links {
+  background: transparent;
+}
+
+/* But still dark when expanded in mobile view */
+@media (max-width: 880px) {
+  body.dark-mode .nav-links {
+    background: #1f2937; /* only for mobile dropdown */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  }
+}
+.hamburger i {
+  color: #111827;
+  transition: color 0.3s ease;
+}
+body.dark-mode .hamburger i {
+    color: #e5e7eb;
+}
+/* --- DARK MODE COLORS --- */
+b/* Ensure text/icons all turn light blue */
+body.dark-mode .logo a,
+body.dark-mode .nav-links a,
+body.dark-mode .icon-btn {
+  color: #dbeafe;
+}
+
+/* Sun icon color (to match nav-links) */
+body.dark-mode .fa-sun {
+  color: #dbeafe !important;
+}
+
+/* Optional hover for nav links in dark mode */
+body.dark-mode .nav-links a:hover {
+  color: #60a5fa;
+  border-bottom: 2px solid #60a5fa;
+}

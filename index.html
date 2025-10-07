@@ -1,15 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JE Heavy Machineries and Quarry Limited</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a7b55340b3.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JE Heavy Machineries & Quarry Ltd</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a7b55340b3.js" crossorigin="anonymous"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    
+  <!-- NAVBAR -->
+  <header id="navbar" role="banner">
+    <nav>
+      <div class="logo">
+        <a href="index.html" aria-label="JE Heavy Machineries home">
+          <i class="fa-solid fa-gears logo-icon" aria-hidden="true"></i>
+          <span class="logo-text">JE Heavy Machineries</span>
+        </a>
+      </div>
+
+      <ul class="nav-links" role="menubar">
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="html/about.html">About</a></li>
+        <li class="nav-item"><a href="html/gallery.html">Gallery</a></li>
+        <li class="nav-item"><a href="html/contact.html">Contact</a></li>
+        <li class="nav-item dark-mode-toggle">
+          <button class="icon-btn" onclick="darkMode()" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </li>
+      </ul>
+
+      <!-- Hamburger (mobile only) -->
+      <button class="icon-btn hamburger" onclick="expand()" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- WELCOME / HERO -->
+  <main>
+    <section id="welcome-section" aria-labelledby="welcome-title">
+      <img src="images/excavator.jpg" alt="Heavy machinery at a quarry" class="hero-img" />
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <h1 id="welcome-title">Welcome to JE Heavy Machineries & Quarry Ltd</h1>
+        <p>Your trusted partner for heavy equipment, quarry operations, and parts.</p>
+        <div class="hero-ctas">
+          <a class="btn primary" href="#services">Our Services</a>
+          <a class="btn outline" href="html/contact.html">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" aria-labelledby="services-title">
+      <div class="container">
+        <h2 id="services-title">Our Services</h2>
+        <p class="lead">We provide reliable machinery, parts and on-site expertise for quarry & construction projects.</p>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <i class="fa-solid fa-truck-monster"></i>
+            <h3>Equipment Rentals</h3>
+            <p>Heavy-duty machinery for short and long-term projects.</p>
+          </article>
+
+          <article class="service-card">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <h3>Maintenance & Repair</h3>
+            <p>On-site and workshop servicing to keep equipment running efficiently.</p>
+          </article>
+
+          <article class="service-card">
+            <i class="fa-solid fa-mountain"></i>
+            <h3>Quarry Operations</h3>
+            <p>Professional quarry management, aggregate processing, and logistics.</p>
+          </article>
+
+          <article class="service-card">
+            <i class="fa-solid fa-box-open"></i>
+            <h3>Parts Supply</h3>
+            <p>Genuine parts and accessories for a wide range of machinery.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 JE Heavy Machineries & Quarry Ltd. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
 </body>
 </html>
