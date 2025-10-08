@@ -286,7 +286,7 @@ body.dark-mode .hamburger i {
     color: #e5e7eb;
 }
 /* --- DARK MODE COLORS --- */
-b/* Ensure text/icons all turn light blue */
+/* Ensure text/icons all turn light blue */
 body.dark-mode .logo a,
 body.dark-mode .nav-links a,
 body.dark-mode .icon-btn {
@@ -302,4 +302,35 @@ body.dark-mode .fa-sun {
 body.dark-mode .nav-links a:hover {
   color: #60a5fa;
   border-bottom: 2px solid #60a5fa;
+}
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #128C7E;
+  transform: scale(1.1);
+}
+
+.whatsapp-float i {
+  margin-top: 15px; /* centers the icon vertically */
+  color: #fff;
+}
+body.dark-mode .whatsapp-float {
+  background: #128C7E;
+}
+body.dark-mode .whatsapp-float:hover {
+  background: #25D366;
 }

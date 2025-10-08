@@ -19,4 +19,3 @@ function expand() {
   burgerIcon.classList.toggle('fa-bars');
   burgerIcon.classList.toggle('fa-xmark');
 }
-
